@@ -12,6 +12,7 @@ $msg = "hello click below link\n kduithelpdesk.16mb.com";
 $msg = wordwrap($msg,70);
 mail("$to","sorry your answer has been edited",$msg);
 //echo "$to";
+//comment
 echo "<meta http-equiv='refresh' content='3'>";
 }
 else
