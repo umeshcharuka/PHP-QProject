@@ -1,0 +1,17 @@
+<?php
+require("conn.php");
+mysql_select_db("test");
+$s=30000;
+$rs=mysql_query("call GETEmpName('$',@y)");
+$rs=mysql_query("select @y");
+if(!$rs)
+{
+
+die('no data'.mysql_error());}
+while($row=mysql_fetch_assoc($rs))
+{
+foreach($row as $cell)echo $cell,"";
+echo "<br/>";
+}
+mysql_close();
+?>
